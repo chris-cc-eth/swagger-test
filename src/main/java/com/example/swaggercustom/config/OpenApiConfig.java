@@ -39,11 +39,11 @@ public class OpenApiConfig {
                                 .description(environment + " Server"));
 
                 // Add local server if not already the current one
-                if (!serverUrl.contains("localhost")) {
-                        servers.add(new Server()
-                                        .url("http://localhost:8080")
-                                        .description("Local Development Server"));
-                }
+                // if (!serverUrl.contains("localhost")) {
+                // servers.add(new Server()
+                // .url("http://localhost:8080")
+                // .description("Local Development Server"));
+                // }
 
                 // Get active profiles
                 String[] activeProfiles = springEnvironment.getActiveProfiles();
