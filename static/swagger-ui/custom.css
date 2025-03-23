@@ -1,0 +1,49 @@
+/* Custom theme styles for Swagger UI */
+.swagger-ui .topbar {
+    background-color: #3f51b5;
+    padding: 10px 0;
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label {
+    color: white;
+}
+
+.swagger-ui .info .title {
+    color: #3f51b5;
+    font-size: 36px;
+}
+
+.swagger-ui .opblock.opblock-get {
+    border-color: #61affe;
+    background: rgba(97, 175, 254, 0.1);
+}
+
+.swagger-ui .opblock.opblock-post {
+    border-color: #49cc90;
+    background: rgba(73, 204, 144, 0.1);
+}
+
+.swagger-ui .opblock.opblock-delete {
+    border-color: #f93e3e;
+    background: rgba(249, 62, 62, 0.1);
+}
+
+.swagger-ui .opblock.opblock-put {
+    border-color: #fca130;
+    background: rgba(252, 161, 48, 0.1);
+}
+
+.swagger-ui .btn.execute {
+    background-color: #4caf50;
+}
+
+/* Add your company logo */
+.swagger-ui .topbar .topbar-wrapper img {
+    content: url('https://example.com/logo.png');
+    height: 40px;
+}
+
+/* Override specific elements */
+.swagger-ui .info .title small.version-stamp {
+    background-color: #3f51b5;
+}

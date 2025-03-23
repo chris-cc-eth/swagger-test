@@ -1,0 +1,60 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+    doc-expansion: none
+    display-request-duration: true
+    disable-swagger-default-url: true
+    use-root-path: true
+    syntaxHighlight:
+      activated: true
+      theme: monokai
+    # Custom CSS
+    custom-css: /swagger-ui/custom.css
+    # Custom JavaScript
+    custom-js: /swagger-ui/custom.js
+  api-docs:
+    path: /api-docs
+    groups:
+      enabled: true
+
+# Application custom properties
+app:
+  server:
+    url: ${SERVER_URL:http://localhost:8080}
+    environment: ${ENVIRONMENT:local}
+
+# Environment-specific configurations
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+app:
+  server:
+    url: http://dev.example.com
+    environment: Development
+
+---
+spring:
+  config:
+    activate:
+      on-profile: uat
+app:
+  server:
+    url: http://uat.example.com
+    environment: UAT
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+app:
+  server:
+    url: https://prod.example.com
+    environment: Production
